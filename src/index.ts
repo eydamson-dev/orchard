@@ -65,7 +65,6 @@ document.querySelectorAll('.card img').forEach((card: Element) => {
     img.src = src;
     modal.classList.remove('hidden');
     modal.classList.add('flex')
-    console.log(this.src)
   })
 })
 
