@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Opensans";
+  src: url('assets/OpenSans/OpenSans-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans_Condensed";
+  src: url('assets/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSans_Light";
+  src: url('assets/OpenSans_Condensed/OpenSans_Condensed-Light.ttf');
+  font-weight: normal;
+}
+
+body, section {
+  background-color: rgb(14, 20, 20)
+}
+
+.hero {
+  background-image: url('assets/component-01/Image-01@2x.jpg');
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
