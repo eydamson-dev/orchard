@@ -16,6 +16,7 @@
 <body>
   <main
     class="scrollbar-hide font-OpenSans text-white m-auto h-screen antialiased scroll-smooth snap-y snap-normal overflow-y-auto overflow-x-hidden lg:h-auto lg:flex lg:flex-col lg:items-center lg:max-w-[1200px]">
+    <!-- Hero section -->
     <section id="hero" class="hero relative w-full h-screen bg-no-repeat bg-center bg-cover snap-start md:bg-none">
       <div class="absolute top-5 left-5 font-bold tracking-wider font-OpenSans drop-shadow-sm sm:text-xl md:text-2xl">
         <span class="text-green-500">Orchard</span> FED</div>
@@ -71,7 +72,8 @@
           <polyline points="6 9 12 15 18 9" />
         </svg>
       </a>
-    </section>
+    </section> <!-- End of Hero section -->
+    <!-- Article -->
     <section id="article"
       class="font-OpenSans h-screen snap-start p-5 text-sm leading-7 text-justify flex flex-col justify-center gap-5 relative sm:hidden lg:max-w-[1200px]">
       <img class="absolute w-1/2 -right-20 top-10 rounded-xl opacity-80 transition ease-in-out hover:scale-110"
@@ -95,12 +97,14 @@
         to start being more mindful about what
         you're cooking and eating.
       </article>
-    </section>
+      </section> <!-- End of article section -->
     <section id="news" class="p-5 md:h-screen snap-start flex flex-col gap-5 justify-center lg:w-full">
       <h1 class="text-xl sm:text-2xl lg:text-4xl text-center font-bold">ALL THE LATEST FROM AEG</h1>
       <div id="cards-container" class="w-full gap-12 md:gap-5 flex flex-col md:flex-row"></div>
-    </section>
+    </section> <!-- End of food cards section -->
   </main>
+
+  <!-- Modal -->
   <div id="modal" class="fixed inset-0 backdrop-blur-sm hidden items-center justify-center">
     <div class="bg-white border-8 rounded-md h-fit relative">
       <span class="close-button absolute right-5 top-5 cursor-pointer">
@@ -114,16 +118,18 @@
       <img class="border rounded-md border-white" src="assets/component-02/Image-03@2x.jpg" alt="food image">
     </div>
   </div>
+
+  <!-- Food card items template -->
   <script id="template" type="template">
-      <div class="card w-full flex flex-col gap-4 transition ease-in-out shadow-red-500 hover:scale-110 hover:shadow-lg lg:max-w-[385px]">
-        <img class="cursor-pointer h-80 w-full object-cover rounded-t-xl border-b-4 border-red-500" src="{{imgSrc}}" alt="{{alt}}" />
-        <div>
-          <h2 class="text-base font-extrabold tracking-wider mb-2">{{title}}</h2>
-          <p class="text-sm tracking-wide text-justify">{{description}}</p>
-        </div>
-        <a href="{{link}}" class="text-sm pb-1 border-b-2 border-red-500 w-fit">READ MORE</a>
+    <div class="card w-full flex flex-col gap-4 transition ease-in-out shadow-red-500 hover:scale-110 hover:shadow-lg lg:max-w-[385px]">
+      <img class="cursor-pointer h-80 w-full object-cover rounded-t-xl border-b-4 border-red-500" src="{{imgSrc}}" alt="{{alt}}" />
+      <div>
+        <h2 class="text-base font-extrabold tracking-wider mb-2">{{title}}</h2>
+        <p class="text-sm tracking-wide text-justify">{{description}}</p>
       </div>
-    </script>
+      <a href="{{link}}" class="text-sm pb-1 border-b-2 border-red-500 w-fit">READ MORE</a>
+    </div>
+  </script>
   <script src="./bundle.js"></script>
 </body>
 

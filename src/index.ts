@@ -8,9 +8,13 @@ type Article = {
   link: string
 }
 
+// will be used for javascript templating
 const template: string = document.getElementById('template').innerHTML;
 const cardsContainer: Element = document.getElementById('cards-container')
 
+/**
+ * this data could be from a server
+ */
 const data: Article[] = [
   {
     imgSrc: 'assets/component-02/Image-01.jpg',
@@ -35,6 +39,9 @@ const data: Article[] = [
   }
 ];
 
+/**
+ * Simple templating technique to generate html with data much easier
+ */
 data.forEach((item => {
   cardsContainer.innerHTML += template
     .replace(/{{imgSrc}}/, item.imgSrc)
@@ -44,6 +51,10 @@ data.forEach((item => {
     .replace(/{{link}}/, item.link)
 }))
 
+/**
+ * Add click listener to all card images
+ * Takes the modal and get the higher hd version of the image that was clicked and placed it on the modal, then make the modal visible
+ */
 const modal = document.getElementById('modal')
 document.querySelectorAll('.card img').forEach((card: Element) => {
   card.addEventListener('click', function () {
@@ -58,12 +69,18 @@ document.querySelectorAll('.card img').forEach((card: Element) => {
   })
 })
 
+/**
+ * Hide the modal when esc key is pressed
+ */
 document.addEventListener('keydown', evt => {
   if (evt.key === 'Escape') {
     closeModal()
   }
 });
 
+/**
+ * Hide the modal when the close button is clicked
+ */
 modal.querySelector('.close-button').addEventListener('click', function () {
   closeModal()
 })
@@ -73,6 +90,9 @@ function closeModal() {
   modal.classList.add('hidden')
 }
 
+/**
+ * Capture all anchor tags and register a click listener
+ */
 const aTags = document.getElementsByTagName('a');
 const aTagArr: Element[] = Array.prototype.slice.call(aTags)
 aTagArr.forEach(a => {

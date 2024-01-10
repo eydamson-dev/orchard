@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+* Fonts
+*/
 @font-face {
   font-family: "Opensans";
   src: url('assets/OpenSans/OpenSans-Regular.ttf');
@@ -21,6 +24,9 @@
   font-weight: normal;
 }
 
+/**
+* default bg color
+*/
 body,
 section {
   background-color: rgb(14, 20, 20)
@@ -30,6 +36,9 @@ section {
   background-image: url('assets/component-01/Image-01@2x.jpg');
 }
 
+/**
+* Hide scrollbars (optional)
+*/
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
