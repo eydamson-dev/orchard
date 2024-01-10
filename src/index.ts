@@ -72,3 +72,11 @@ function closeModal() {
   modal.classList.remove('flex');
   modal.classList.add('hidden')
 }
+
+const aTags = document.getElementsByTagName('a');
+const aTagArr:Element[] = Array.prototype.slice.call(aTags)
+aTagArr.forEach(a => {
+  a.addEventListener('click', function(e) {
+    console.log(e.target);
+  })
+})
