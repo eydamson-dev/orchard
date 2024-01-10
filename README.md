@@ -1,5 +1,10 @@
 # Interface Development Test
 
+## To run the project
+* ```npm run start``` Start the dev server
+* ```npm run build``` Builds the project(development)
+* ```npm run buld-prod``` Builds the project(production)
+
 ## Design assets
 * Invision public URL: https://invis.io/N312IJ0C8GMK
 * Assets used in the build have been packaged under the `/assets` folder.
