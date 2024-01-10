@@ -45,11 +45,11 @@ data.forEach((item => {
 }))
 
 const modal = document.getElementById('modal')
-document.querySelectorAll('.card img').forEach((card:Element) => {
-  card.addEventListener('click', function() {
+document.querySelectorAll('.card img').forEach((card: Element) => {
+  card.addEventListener('click', function () {
     const img = modal.getElementsByTagName('img')[0]
     let src = this.src;
-    const imgFileName = src.substring(src.lastIndexOf('/')+1, src.lastIndexOf('.'));
+    const imgFileName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
     src = `assets/component-02/${imgFileName}@2x.jpg`;
     img.src = src;
     modal.classList.remove('hidden');
@@ -64,7 +64,7 @@ document.addEventListener('keydown', evt => {
   }
 });
 
-modal.querySelector('.close-button').addEventListener('click', function() {
+modal.querySelector('.close-button').addEventListener('click', function () {
   closeModal()
 })
 
@@ -74,9 +74,9 @@ function closeModal() {
 }
 
 const aTags = document.getElementsByTagName('a');
-const aTagArr:Element[] = Array.prototype.slice.call(aTags)
+const aTagArr: Element[] = Array.prototype.slice.call(aTags)
 aTagArr.forEach(a => {
-  a.addEventListener('click', function(e) {
+  a.addEventListener('click', function (e) {
     console.log(e.target);
   })
 })
