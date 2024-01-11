@@ -45,10 +45,10 @@
           </article>
           <div
             class="hidden gap-4 relative sm:grid sm:grid-rows-1 sm:grid-cols-2 lg:row-start-1 lg:col-start-1 lg:row-span-2">
-            <img class="w-full object-cover hidden row-span-2 md:block md:self-center"
+            <img class="w-full object-cover hidden row-span-2 md:block md:self-center transition ease-in-out hover:scale-110 hover:shadow-lg"
               src="assets/component-01/Image-01.jpg" alt="father and son">
-            <img class="w-full object-cover lg:self-end" src="assets/component-01/Image-02.jpg" alt="fruits">
-            <img class="w-full object-cover" src="assets/component-01/Image-03.jpg" alt="vegetable">
+            <img class="w-full object-cover transition ease-in-out hover:scale-110 hover:shadow-lg lg:self-end" src="assets/component-01/Image-02.jpg" alt="fruits">
+            <img class="w-full object-cover transition ease-in-out hover:scale-110 hover:shadow-lg" src="assets/component-01/Image-03.jpg" alt="vegetable">
             <article
               class="hidden text-justify tracking-widest w-full absolute bottom-0 md:block p-5 backdrop-blur-sm drop-shadow-sm lg:hidden">
               <h1 class="text-red-500 text-center">BE MINDFUL</h1>
@@ -121,7 +121,7 @@
 
   <!-- Food card items template -->
   <script id="template" type="template">
-    <div class="card w-full flex flex-col gap-4 transition ease-in-out shadow-red-500 lg:hover:scale-110 lg:hover:shadow-lg lg:max-w-[385px]">
+    <div class="card w-full flex flex-col gap-4 transition ease-in-out shadow-red-500 lg:max-w-[385px]">
       <img class="cursor-pointer h-80 w-full object-cover rounded-t-xl border-b-4 border-red-500" src="{{imgSrc}}" alt="{{alt}}" />
       <div>
         <h2 class="text-base font-extrabold tracking-wider mb-2">{{title}}</h2>
