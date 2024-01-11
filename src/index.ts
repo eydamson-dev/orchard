@@ -56,15 +56,16 @@ data.forEach((item => {
  * Takes the modal and get the higher hd version of the image that was clicked and placed it on the modal, then make the modal visible
  */
 const modal = document.getElementById('modal')
-document.querySelectorAll('.card img').forEach((card: Element) => {
+document.querySelectorAll('#gallery img').forEach((card: Element) => {
   card.addEventListener('click', function () {
     const img = modal.getElementsByTagName('img')[0]
     let src = this.src;
     const imgFileName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
-    src = `assets/component-02/${imgFileName}@2x.jpg`;
+    src = `assets/component-01/${imgFileName}@2x.jpg`;
     img.src = src;
+    img.alt = this.alt;
     modal.classList.remove('hidden');
-    modal.classList.add('flex')
+    modal.classList.add('flex');
   })
 })
 
