@@ -1,6 +1,7 @@
 # Interface Development Test
 
 ## To run the project
+* ```npm install``` Install required packages
 * ```npm run start``` Start the dev server
 * ```npm run build``` Builds the project(development)
 * ```npm run buld-prod``` Builds the project(production)
