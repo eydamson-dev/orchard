@@ -1,5 +1,7 @@
 name: Deploy_to_GH_Pages
-on: push
+on:
+  push:
+    branches: [main]
 
 jobs:
   build:
