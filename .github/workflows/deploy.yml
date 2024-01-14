@@ -1,8 +1,39 @@
-name: Simple-Deployment
+name: Deploy_to_GH_Pages
 on: push
+
 jobs:
-  hello-world:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: hello
-        run: echo "hellow world"
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name:
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build-prod
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: orchard-web
+          path: ./dist
+  deploy:
+    environment:
+      name: production
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: orchard-web
+          path: ./dist
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./dist
