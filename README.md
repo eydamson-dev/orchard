@@ -1,6 +1,13 @@
 # Interface Development Test
 
-## To run the project
+This repository hosts a dynamic project named "Orchard." Leveraging seamless CI/CD integration, our deployment pipeline is intricately configured to harness the power of GitHub Pages. A simple push to the main branch automatically initiates the deployment workflow.
+
+## Explore Orchard
+
+After a successful build, experience the project firsthand by visiting the live page accessible through this [link](https://eydamson-dev.github.io/orchard/). Witness the latest updates and enhancements brought to you effortlessly through our streamlined development and deployment process.
+
+
+## To run the project locally
 * ```npm install``` Install required packages
 * ```npm run start``` Start the dev server
 * ```npm run build``` Builds the project(development)
