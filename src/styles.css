@@ -36,6 +36,10 @@ section {
   background-image: url('assets/component-01/Image-01@2x.jpg');
 }
 
+#modal .modal-container {
+  max-height: 100%;
+}
+
 /**
 * Hide scrollbars (optional)
 */
