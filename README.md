@@ -1,6 +1,7 @@
 # Interface Development Test
 
-This repository hosts a dynamic project named "Orchard." Leveraging seamless CI/CD integration, our deployment pipeline is intricately configured to harness the power of GitHub Pages. A simple push to the main branch automatically initiates the deployment workflow.
+## CI/CD Setup
+This project is up and running on GitHub Pages, thanks to the smooth CI/CD setup. Just push a commit to the main branch, and after a successful build, the page using this via [https://eydamson-dev.github.io/orchard/](https://eydamson-dev.github.io/orchard/) 🌟
 
 ## Explore Orchard
 
