@@ -1,7 +1,7 @@
 # Interface Development Test
 
 ## CI/CD Setup
-This project is up and running on GitHub Pages, thanks to the smooth CI/CD setup. Just push a commit to the main branch, and after a successful build, the page using this via [https://eydamson-dev.github.io/orchard/](https://eydamson-dev.github.io/orchard/) 🌟
+This project is up and running on GitHub Pages, thanks to the smooth CI/CD setup. Just push a commit to the main branch, and after a successful build, you can visit the page using via [https://eydamson-dev.github.io/orchard/](https://eydamson-dev.github.io/orchard/) 🌟
 
 ## To run the project locally
 * ```npm install``` Install required packages
